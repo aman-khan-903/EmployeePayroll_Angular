@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "EmployeePayrollApp_Angular": {
+    "Employee_Payroll": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/employee-payroll-app-angular",
+            "outputPath": "dist/employee-payroll",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -26,6 +26,7 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
+              "src/assets",
               {
                 "glob": "**/*",
                 "input": "public"
@@ -64,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "EmployeePayrollApp_Angular:build:production"
+              "buildTarget": "Employee_Payroll:build:production"
             },
             "development": {
-              "buildTarget": "EmployeePayrollApp_Angular:build:development"
+              "buildTarget": "Employee_Payroll:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -85,6 +86,7 @@
             "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
             "assets": [
+              "src/assets",
               {
                 "glob": "**/*",
                 "input": "public"
